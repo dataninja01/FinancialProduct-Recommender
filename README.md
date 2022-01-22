@@ -22,4 +22,4 @@ Undecided components:
 Monitoring with WandB or Prometheus & Grafana? [Daisy]
 MLflow for model versioning?
 Continious experimenting - how to guard against data drift? [Daisy]
-https://github.com/cchio/deep-pwning - adversarial ML to challenge robustness/security of our ML model [Sarah]
+
