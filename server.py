@@ -7,22 +7,23 @@ from flask import Flask, request, render_template
 app = Flask(__name__, template_folder='templates')
 
 # load model w metadata
-model = joblib.load("models/pipe_clf_checkpoint.joblib")
-model_clf = model['pipeline']
+model = joblib.load("models/pipe_nmf_model_checkpoint.joblib")
+nmf_model = model['pipeline']
 
 # route post requests
 @app.route('/')
 def my_form():
-    return render_template('form.html')
-    
+    return render_template('Fintech_Credit.html')
+
 @app.route("/", methods = ["POST"])
 def predict():
-    text = request.form['text1']
+    text = request.form['name']
     input=[text]
-    preds = model_clf.predict(input)
-    predictions = [model['class labels'][key] for key in preds]
+    preds = nmf_model.transform(input)
+    topic = preds.argmax(axis = 1)
+    predictions = [nmf_model_pipeline_param['mytopic_dict'][key] for key in topic]
     output = ''.join(predictions).capitalize()
-    return render_template('form.html', text=text, final = output)
+    return render_template('Fintech_Credit.html', final = output)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

@@ -30,7 +30,7 @@ Watch the video lecture for more info on this! -->
       <li>Provide us with basic information so we can personalize the recommendations</li>
     </ol>
 
-    <form class="loginForm" method="get">
+    <form class="loginForm" method="POST">
 
 
       <label for="info">First Name: </label>
@@ -60,6 +60,7 @@ Watch the video lecture for more info on this! -->
     </form>
     <br>
     <br>
+	<form method="POST">
     <div class="exit">
         <p>Briefly describe your financial needs (eg:- Credit Card, Credit build, Personal Loan, Credit Counselling):</p>
 
@@ -68,10 +69,20 @@ Watch the video lecture for more info on this! -->
       </div>
     <input type="submit" name="" value="Submit">
 
-    <div class="someclass">
-      <p>Thanks so much for visiting this site! </p>
-    </div>
-
+  </form>
+  {% if final %}
+  <div >
+    <h3>Here are some of the recommendations for {{final}} based on your input</h3>
+  <ol>
+    <h5><li>Chime-Credit Builder - https://www.chime.com/ <img src="credit-builder.jpg" alt=""></li></h5>
+    <h5><li>Discover-Secured Card - https://www.discover.com/products/secured-card-af.html <img src="discover-secured.jpg" alt=""></li></h5>
+    <h5><li>CapitalOne Quicksilver Secured - https://www.capitalone.com/credit-cards/quicksilver-secured <img src="Quicksilver-secured.jpg" alt=""></li></h5>
+  </ol>
+  <br>
+  <br>
+  <h5>Thanks so much for visiting this site! </h5>
+   {% endif %}
+  </div>
 
 
   </body>
