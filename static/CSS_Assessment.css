@@ -9,7 +9,7 @@ body{
   background:#808080;
   font-family: 'Aldrich', sans-serif;
 }
-
+image-rendering: auto;
 /*Task # 2
 Change the h1 to have a 4px solid black border*/
 /* And center the text. */
