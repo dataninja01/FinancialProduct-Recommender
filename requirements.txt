@@ -1,0 +1,11 @@
+datasets==1.16.1
+Flask==1.1.1
+Flask-WTF==0.14.2
+Jinja2
+joblib==1.0.1
+scikit-learn>=0.18
+MarkupSafe==1.1.0
+numpy==1.19.5
+pandas==1.1.5
+requests==2.25.1
+WTForms==2.2.1
