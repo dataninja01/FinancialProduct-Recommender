@@ -26,4 +26,5 @@ def predict():
     return render_template('Fintech_Credit.html', final = output)
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  #app.run(debug=True)
+  if "serve" in sys.argv: app.run(host='0.0.0.0', port=8000, debug=False)
