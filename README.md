@@ -25,8 +25,15 @@ Data source: Equifax Data and Hacked Data
 -topic tracking lightweight NLP model & continuous training
 ```   
 
-Undecided components: Plug in [Linux Foundation AI Landscape](https://landscape.lfai.foundation)
+### Undecided components:
+```
+Plug in components from [Linux Foundation AI Landscape](https://landscape.lfai.foundation)
 Monitoring with WandB or Prometheus & Grafana? [Daisy]
 MLflow for model versioning?
 Continious experimenting - how to guard against data drift? [Daisy]
+```
 
+### Final Presentation:
+```
+Plug into PPT a mapping of [MLOps Stack Template](https://ml-ops.org/content/state-of-mlops) to our Credit Invincible Capstone Project
+```
