@@ -10,7 +10,7 @@ Data source: Equifax Data and Hacked Data
 ```
 -1st page that accepts user input and POSTs info to SQLite database 
 -2nd page that GETs output of ML and provides recommendations (min 2) to user
--3rd Unit testing of code with Ponicode AI tool
+-3rd Unit testing of code with Ponicode AI tool => https://madewithml.com/courses/mlops/testing/ 
 ```
 
 ### Backend DBs trigger events to synchronize workflow events [Mani, Daisy, and Sarah]
