@@ -26,5 +26,5 @@ def predict():
     return render_template('Fintech_Credit.html', final = output)
 
 if __name__ == '__main__':
-  #app.run(debug=True)
-  app.run(debug=False)
+  app.run(debug=True)
+#   app.run(debug=False)
