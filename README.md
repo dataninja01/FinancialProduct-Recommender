@@ -1,15 +1,16 @@
 # Capstone-Project
 > "You cannot escape the responsibility of tomorrow by evading it today." -Abraham Lincoln
-
+```
 GCP Deployment/Hosting/Endpoints
 Kubeflow to manage distributed env 
 Dockerize & GCP container registry [Sarah]
 Data source: Equifax Data
-
-### Flask app front-end: [Sarah]
+```
+### Flask app front-end and QA: [Sarah]
 ```
 -1st page that accepts user input and POSTs info to SQLite database 
 -2nd page that GETs output of ML and provides recommendations (min 2) to user
+-3rd Unit testing of code with Ponicode AI tool
 ```
 
 ### Backend DBs trigger events to synchronize workflow events [Mani, Daisy, and Sarah]
