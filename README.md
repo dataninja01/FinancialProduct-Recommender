@@ -10,7 +10,7 @@ Data source: Equifax Data and Hacked Data
 ```
 -1st page that accepts user input and POSTs info to SQLite database 
 -2nd page that GETs output of ML and provides recommendations (min 2) to user
--3rd Unit testing of code with Ponicode AI tool => https://madewithml.com/courses/mlops/testing/ 
+-Unit testing of code with [Ponicode](https://www.ponicode.com) AI tool and [standards](https://madewithml.com/courses/mlops/testing/) 
 ```
 
 ### Backend DBs trigger events to synchronize workflow events [Mani, Daisy, and Sarah]
@@ -28,7 +28,7 @@ Data source: Equifax Data and Hacked Data
 ### Undecided components:
 ```
 Plug in components from [Linux Foundation AI Landscape](https://landscape.lfai.foundation)
-Monitoring with WandB or Prometheus & Grafana? [Daisy]
+Monitoring with WandB or Prometheus & Grafana? Code coverage? Data tracking? API calls? [Daisy]
 MLflow for model versioning?
 Continious experimenting - how to guard against data drift? [Daisy]
 ```
