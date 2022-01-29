@@ -4,7 +4,7 @@
 GCP Deployment/Hosting/Endpoints
 Kubeflow to manage distributed env 
 Dockerize & GCP container registry [Sarah]
-Data source: Equifax Data
+Data source: Equifax Data and Hacked Data
 ```
 ### Flask app front-end and QA: [Sarah]
 ```
@@ -25,7 +25,7 @@ Data source: Equifax Data
 -topic tracking lightweight NLP model & continuous training
 ```   
 
-Undecided components:
+Undecided components: Plug in [Linux Foundation AI Landscape](https://landscape.lfai.foundation)
 Monitoring with WandB or Prometheus & Grafana? [Daisy]
 MLflow for model versioning?
 Continious experimenting - how to guard against data drift? [Daisy]
