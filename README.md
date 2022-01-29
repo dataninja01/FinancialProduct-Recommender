@@ -3,7 +3,7 @@
 ```
 GCP Deployment/Hosting/Endpoints
 Kubeflow to manage distributed env 
-Dockerize & GCP container registry [Sarah]
+Dockerize & GCP container registry
 Data source: Equifax Data and Hacked Data
 ```
 ### Flask app front-end and QA: [Sarah]
@@ -11,6 +11,7 @@ Data source: Equifax Data and Hacked Data
 -1st page that accepts user input and POSTs info to SQLite database 
 -2nd page that GETs output of ML and provides recommendations (min 2) to user
 -Unit testing of code with [Ponicode](https://www.ponicode.com) AI tool and [standards](https://madewithml.com/courses/mlops/testing/) 
+-Containerization and registry
 ```
 
 ### Backend DBs trigger events to synchronize workflow events [Mani, Daisy, and Sarah]
