@@ -27,4 +27,4 @@ def predict():
 
 if __name__ == '__main__':
   #app.run(debug=True)
-  if "serve" in sys.argv: app.run(host='0.0.0.0', port=8080, debug=False)
+  if "serve" in sys.argv: app.run(host='0.0.0.0', port=8000, debug=False)
