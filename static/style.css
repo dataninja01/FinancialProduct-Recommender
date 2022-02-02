@@ -1,0 +1,24 @@
+.textbox {
+  border: 2px slid dodgerblue;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 40px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  float: right;
+  margin-right: 5em;
+}
+
+.textbox:hover {
+  color: #404040 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
+}
+
