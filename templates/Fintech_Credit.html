@@ -52,7 +52,7 @@
   <br>
   <ul>
   <h3><li>To get started, please fill out the form with preliminary information.</li></h3>
-   <img src="/static/credit.jpg" alt="plant" style="float: left;">        
+   <img src="/static/credit.jpg" alt="plant" style="float: left;">
    <form class="loginForm" method="POST" style="text-align: left;">
             <br>
             <label for="info">First Name: </label>
@@ -74,7 +74,7 @@
             <h3><li>What is your highest level of education?</li></h3>
             <select name="education" style="cursor: pointer;">
               <option value="Options">Pick One Option</option>
-              <option value="High School">High School</option>  
+              <option value="High School">High School</option>
               <option value="Undergraduate">Undergraduate</option>
               <option value="Graduate">Graduate</option>
               <option value="Doctorate">Doctorate</option>
@@ -85,7 +85,7 @@
           <br>
           <br>
    <h3><li>Next, provide a brief description for the financial products that are of interest.</li></h3>
-      <br>  
+      <br>
         <form method="POST">
             <textarea name="textbox" placeholder="Credit card, credit building, personal loan, financial counselling?..." rows="10" cols="109"></textarea>
             <input class="textbox" style="font-size: x-large; cursor: pointer; " type="submit">
@@ -98,41 +98,41 @@
 
 <div class="w3-quarter">
 <h2>Your Results</h2>
-<p>Based on our analysis of your information, here are the top three financial recommendations:</p>
+<p>Based on our analysis of your information, here are the top three financial recommendations for {{final}}:</p>
 <img src="/static/make_it_rain_financially.png" alt="financial options" style="width:60%">
 </div>
 
 <div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="/static/credit-builder.jpg" alt="Option1" style="width:100%">
-  <div class="w3-container">
+ <div class="w3-card w3-yellow">
+  <!-- <img src="/static/credit-builder.jpg" alt="Option1" style="width:100%"> -->
+  <div class="w3-container w3-hover-green w3-text-red">
   <h3>1st Recommendation</h3>
-  <h4>Chime-Credit Builder</h4>
-  <p>https://www.chime.com/</p>
+  <h4>{{card[0]}}</h4>
+  <input type="button" onclick="window.location.href='{{card_url[0]}}';" value="website link" />
   </div>
-  </div>
+ </div>
 </div>
 
 <div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="/static/discover-secured.jpg" alt="Option2" style="width:100%">
-  <div class="w3-container">
+ <div class="w3-card w3-yellow">
+  <!-- <img src="/static/discover-secured.jpg" alt="Option2" style="width:100%"> -->
+  <div class="w3-container w3-hover-green w3-text-red">
   <h3>2nd Recommendation</h3>
-  <h4>Discover-Secured Card</h4>
-  <p>https://www.discover.com/products/secured-card-af.html</p>
+  <h4>{{card[1]}}</h4>
+  <input type="button" onclick="window.location.href='{{card_url[1]}}';" value="website link" />
   </div>
   </div>
 </div>
 
 <div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="/static/Quicksilver-secured.jpg" alt="Option3" style="width:100%">
-  <div class="w3-container">
+ <div class="w3-card w3-yellow">
+  <!-- <img src="/static/Quicksilver-secured.jpg" alt="Option3" style="width:100%"> -->
+  <div class="w3-container w3-hover-green w3-text-red">
   <h3>3rd Recommendation</h3>
-  <h4>CapitalOne Quicksilver Secured</h4>
-  <p>https://www.capitalone.com/credit-cards/quicksilver-secured</p>
+  <h4>{{card[2]}}</h4>
+  <input type="button" onclick="window.location.href='{{card_url[2]}}';" value="website link" />
   </div>
-  </div>
+ </div>
 </div>
 
 </div>
@@ -184,18 +184,18 @@
     </div>
     <div class="w3-col m7">
       <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
-      <div class="w3-section">      
+      <div class="w3-section">
         <label>Name</label>
         <input class="w3-input" type="text" name="Name" required>
       </div>
-      <div class="w3-section">      
+      <div class="w3-section">
         <label>Email</label>
         <input class="w3-input" type="text" name="Email" required>
       </div>
-      <div class="w3-section">      
+      <div class="w3-section">
         <label>Message</label>
         <input class="w3-input" type="text" name="Message" required>
-      </div>  
+      </div>
       <input class="w3-check" type="checkbox" checked name="Like">
       <label>I Like it!</label>
       <button type="submit" class="w3-button w3-hover-green w3-XXLarge w3-right-align w3-theme"><b>Send</b></button>
@@ -211,10 +211,10 @@
   <h4>TODO: Thank you note... FourthBrain.ai</h4>
   <p>Powered by <a href="https://github.com/dataninja01/Capstone-Project" target="_blank">Credit Invincible Project on GitHub</a></p>
   <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  
+
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
@@ -239,7 +239,7 @@ function openNav() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-  } else { 
+  } else {
     x.className = x.className.replace(" w3-show", "");
   }
 }
