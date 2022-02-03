@@ -31,7 +31,8 @@ def predict():
     output = ''.join(predictions).capitalize()
     card = d.loc[d['category'] == 'Credit repair', 'Card_name'].values
     url = d.loc[d['category'] == 'Credit repair', 'url'].values
-    return render_template('Fintech_Credit.html', final = output, card = card, card_url = url)
+    return render_template('Fintech_Credit.html', final = output)
+    # , card = card, card_url = url
 
 if __name__ == '__main__':
   app.run(debug=True)
