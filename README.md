@@ -1,10 +1,20 @@
 # Capstone-Project
 > "You cannot escape the responsibility of tomorrow by evading it today." -Abraham Lincoln
+
+### ML Landscape:
 ```
+ML- Scikit Learn, XGBoost
+Data Source - Consumer CFPB inquires and complaints DB, Reddit Finance Posts, Debt inquires
+Programming and Pre-processing - Python, Flask, Pandas, Numpy, spaCy, Jypter Notebook
+Model Versioning - MLFlow
+Backend Relational DB - MySQL and CloudSQL
+Monitoring and Visualization - Prometheus and Grafana
+Kubernetes for Distributed Computing
+AI Ethics - We do not calculate personal data in our recommendation engine to guard against bias
+Education - FourthBrain AI MLOps Class
 GCP Deployment/Hosting/Endpoints
 Kubeflow to manage distributed env 
 Dockerize & GCP container registry
-Data source: Equifax Data and Hacked Data
 ```
 ### Flask app QA, front-end and container: [Sarah]
 ```
@@ -24,23 +34,17 @@ Data source: Equifax Data and Hacked Data
 ### ML pipeline in storage bucket for recommendation engine [Mani]
 ```
 -topic tracking lightweight NLP model & continuous training
+-MLflow for model versioning
 ```   
 
 ### Monitoring [Daisy]
 ```
-GCP Metrics for VM instance
-Google Analytics
-Monitoring with WandB? Prometheus & Grafana? Code coverage? Data validation? API calls? Logging? 
-Continious experimenting - how to guard against data drift?
+GCP Metrics for VM instance resource management displayed on Prometheus & Grafana 
+Continious experimenting protocol - how to guard against data drift?
 ```
 
 ### Final Presentation: [Modsquad Team/Sarah]
 ```
 Plug into PPT a mapping of [MLOps Stack Template](https://ml-ops.org/content/state-of-mlops) to our Credit Invincible Capstone Project
 ```
-### Undecided Issues:
-```
-Plug in components from [Linux Foundation AI Landscape](https://landscape.lfai.foundation)
-MLflow for model versioning? 
-Schedule & event triggers for overall project and specific ML pipeline?
-```
+
