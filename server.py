@@ -33,8 +33,8 @@ def predict():
     topic = preds.argmax(axis = 1)
     predictions = [model['mytopic_dict'][key] for key in topic]
     output = ''.join(predictions).capitalize()
-    reco_card = d.loc[d['category'] == 'Credit repair', 'Card_name'].values
-    reco_url = d.loc[d['category'] == 'Credit repair', 'url'].values
+    reco_card = d.loc[d['category'] == output, 'Card_name'].values
+    reco_url = d.loc[d['category'] == output, 'url'].values
     return render_template('Fintech_Credit.html', final = output, final1 = reco_card, final2 = reco_url)
 
 if __name__ == '__main__':
