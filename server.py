@@ -38,5 +38,5 @@ def predict():
     return render_template('Fintech_Credit.html', final = output, final1 = reco_card, final2 = reco_url)
 
 if __name__ == '__main__':
-  app.run(debug=True)
-#   app.run(debug=False)
+  #app.run(debug=True)
+    if "serve" in sys.argv: app.run(host='0.0.0.0', port=8000, debug=False)
