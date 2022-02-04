@@ -12,38 +12,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <body id="myPage">
-
-<!-- Sidebar on click -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button">Link 4</a>
-  <a href="#" class="w3-bar-item w3-button">Link 5</a>
-</nav>
-
-<!-- Navbar -->
-<div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Credit Invincible Project</a>
-  <a href="#try" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Try it Out!</a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Your Results</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">The ModSquad</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
- </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#try" class="w3-bar-item w3-button">Try it Out!</a>
-    <a href="#work" class="w3-bar-item w3-button">Your Results</a>
-    <a href="#team" class="w3-bar-item w3-button">The ModSquad</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-  </div>
-</div>
 <br>
 <br>
 <!-- Image Header -->
@@ -86,12 +54,10 @@
               <br>
               <br>
             </select>
-          </form>
           <br>
           <br>
    <h3><li>Next, provide a brief description for the financial products that are of interest.</li></h3>
       <br>
-        <form method="POST">
             <textarea name="textbox" placeholder="Credit card, credit building, personal loan, financial counselling?..." rows="10" cols="109"></textarea>
             <input class="textbox" style="font-size: x-large; cursor: pointer; " type="submit">
       </ul>
@@ -145,33 +111,31 @@
 <div class="w3-row"><br>
 
 <div class="w3-third">
+  <a href="https://www.linkedin.com/in/mani-nagaraj/">
   <img src="/static/Mani.jpg" alt="Mani" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Mani Nagaraj</h3>
   <p>Data Ninja</p>
+</a>
 </div>
 
 <div class="w3-third">
+  <a href="https://www.linkedin.com/in/xinyi-daisy-h-8b2b63111/">
   <img src="/static/Daisy_He.JPG" alt="Daisy" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Daisy He</h3>
   <p>Savy Monitor</p>
+</a>
 </div>
 
 <div class="w3-third">
+  <a href="https://www.linkedin.com/in/sarah-perkins-3359245a/">
   <img src="/static/sperks_pic.jpeg" alt="Sperks" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Sarah Perkins</h3>
   <p>Hacker</p>
+</a>
 </div>
 
 </div>
 </div>
-
-
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div>
-
 
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
