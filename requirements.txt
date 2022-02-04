@@ -2,7 +2,7 @@ Flask==1.1.2
 Flask-WTF==0.14.2
 Jinja2==2.11.3
 joblib==1.0.1
-scikit-learn==0.18.2
+scikit-learn
 MarkupSafe==2.0.1
 numpy==1.22.1
 pandas==1.4.0
