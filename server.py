@@ -16,7 +16,7 @@ from dbsetup import create_connection, create_session, update_or_create_page, se
 # instantiate Flask app
 app = Flask(__name__, template_folder='templates')
 
-<<<<<<< HEAD
+
 app.secret_key = os.urandom(24)
 
 ## Add pusher app credential
