@@ -8,8 +8,8 @@ from flask import Flask, request, render_template
 app = Flask(__name__, template_folder='templates')
 
 # load model w metadata
-model = joblib.load("models/pipe_nmf_model_checkpoint.joblib")
-nmf_model = model['pipeline']
+model = joblib.load("models/pipe_clf_svc_checkpoint.joblib")
+clf_model = model['pipeline']
 #Load the lookup table
 data = pd.read_csv('data/Credit Card agreements and rates data.csv')
 d= data.groupby(['category'],as_index=False).apply(lambda x: x.nsmallest(3, 'Min_APR'))
@@ -29,10 +29,8 @@ def my_form():
 def predict():
     text = request.form['textbox']
     input=[text]
-    preds = nmf_model.transform(input)
-    topic = preds.argmax(axis = 1)
-    predictions = [model['mytopic_dict'][key] for key in topic]
-    output = ''.join(predictions).capitalize()
+    predictions = clf_model.predict(input)
+    output = ''.join(predictions)
     reco_card = d.loc[d['category'] == output, 'Card_name'].values
     reco_url = d.loc[d['category'] == output, 'url'].values
     return render_template('Fintech_Credit.html', final = output, final1 = reco_card, final2 = reco_url)
