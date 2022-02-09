@@ -1,8 +1,8 @@
-# Credit Invisible to Invincible Capstone-Project
+# ML Financial Advisor: Transforming Credit Invisible to Invincible (Capstone Project)
 
 ### Design & Feature Selection:
 ```
-Education - FourthBrain AI MLOps Class
+Education - FourthBrain MLOps Class November 21 cohort
 Data Source - Consumer CFPB inquiries and complaints DB, Reddit Finance Posts, Debt inquires, publically available hacked data from breaches 
 Programming and Pre-processing - Python, Flask, Pandas, Numpy, spaCy, Jypter Notebook
 ML- Scikit Learn, XGBoost
@@ -17,7 +17,7 @@ Kubeflow to manage distributed env
 ```
 ### Operations and Monitoring
 ```
-Monitoring and Visualization - Prometheus and Grafana
+Monitoring and Visualization - Prometheus and Grafana, Pusher? []
 Kubernetes for Distributed Computing
 Kubeflow to manage distributed env 
 AI Ethics - We do not calculate personal data in our recommendation engine to guard against bias
