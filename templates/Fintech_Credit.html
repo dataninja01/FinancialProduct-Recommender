@@ -46,7 +46,7 @@
 
 <body id="#">
 <!-- Main Container -->
-<div class="container"> 
+<div class="container">
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <span class="light">&nbsp;</span>
@@ -58,15 +58,15 @@
   <!-- About Section -->
   <section class="about" id="about">
     <h2 class="hidden">About</h2>
-    <!-- 
+    <!--
   Replace form-handler.php with URL where to send the form-data when the form is submitted
   Goto http://w3c.github.io/html-reference/input.text.html#input.text for more information on all attributes that can be used with text input field
 -->
-    <form method="post" action="form-handler.php">
+    <form class="loginForm" method="post" action="register">
       <div>
         <h2>Start your credit invincible journey by filling out this credit assessment form:</h2>
       <label for="first_name">First Name: <span class="required">*</span></label>
-      <input type="text" id="first_name" name="first_name" value="" placeholder="name" required="required" autofocus />
+      <input type="first_name" id="first_name" name="first_name" value="" placeholder="first_name" required="required" autofocus />
       </div>
       <label for="last_name">Last Name: <span class="required">*</span></label>
       <input type="last_name" id="last_name" name="last_name" value="" placeholder="last_name" required="required" />
@@ -95,7 +95,7 @@
       <br>
       <h4>Write a brief description of the financial topics that are of interest.</h4>
         <textarea name="textbox" placeholder="Credit card, credit building, personal loan, financial counselling?..." rows="10" cols="109"></textarea>
-        <input class="textbox" style="font-size: x-large; cursor: pointer; " type="submit">
+        <input class="textbox" style="font-size: large; cursor: pointer; " type="submit">
     </form>
 </div>
 {% if final %}
@@ -187,7 +187,7 @@
   <h4>MLOps Rulz!</h4>
   <h4>Many sincere thanks to FourthBrain.ai, Greg Loughnane, and Ashwini Badgujar</h4>
   <p>Powered by <a href="https://github.com/dataninja01/Capstone-Project" target="_blank">Credit Invincible Project on GitHub</a></p>
- 
+
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>

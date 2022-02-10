@@ -5,7 +5,7 @@ import sys
 import os
 from flask import Flask, flash, request, url_for, redirect, make_response, render_template
 from flask_sqlalchemy import SQLAlchemy
-import pymysql
+# import pymysql
 # pymysql.install_as_MySQLdb()
 
 
