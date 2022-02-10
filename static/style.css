@@ -33,13 +33,22 @@ body {
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 200;
+	display: inline-block;
 }
 /* Container */
 .container {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 1000px;
+	height: 640px;
+	background-color: #FFFFFF;
+}
+/*Assessment section */
+.assessment {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 10px;
 	background-color: #FFFFFF;
 }
 /* Navigation */
@@ -100,6 +109,7 @@ ul li:hover a {
 	background-color: #B3B3B3;
 	padding-top: 0px;
 	padding-bottom: 0px;
+	margin-inline-start: auto;
 }
 .light {
 	font-weight: bold;
@@ -116,7 +126,7 @@ ul li:hover a {
 /* About Section */
 .text_column {
 	width: 29%;
-	text-align: justify;
+	text-align: center;
 	font-weight: lighter;
 	line-height: 25px;
 	float: left;
@@ -125,12 +135,14 @@ ul li:hover a {
 	color: #A3A3A3;
 }
 .about {
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-top: 35px;
-	display: inline-block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+	padding-left: 50px;
+	padding-right: 50px;
+	height: 10px;
 	background-color: #FFFFFF;
-	margin-top: 0px;
 }
 /* Stats Gallery */
 .stats {
@@ -273,7 +285,6 @@ footer .footer_column p {
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-	background-image: url(../images/pattern.png);
 	background-repeat: repeat;
 }
 footer {
@@ -363,8 +374,8 @@ nav ul li {
   transition: 0.2s;
 }
 .hero_header {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
 	line-height: 22px;
 	text-align: center;
 }
@@ -388,7 +399,6 @@ nav ul li {
 	margin-left: 0px;
 	width: 100%;
 	float: none;
-	overflow: auto;
 	display: inline-block;
 	background: #52bad5;
 }
