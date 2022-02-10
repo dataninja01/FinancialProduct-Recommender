@@ -22,6 +22,7 @@ app = Flask(__name__, template_folder='templates')
 PASSWORD ="fintech1234"
 PUBLIC_IP_ADDRESS = "35.230.124.147"
 DBNAME ="visitor"
+DBNAME2 = "webtraffic"
 PROJECT_ID ="fb-mlops-nov-21"
 INSTANCE_NAME ="fintech-reco-db"
 
