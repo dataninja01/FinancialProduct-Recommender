@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Credit Invincible Project</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/static/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Aldrich|Fredoka+One" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<body id="myPage">
+
 
 <!-- Sidebar on click -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
@@ -29,8 +27,8 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Credit Invincible Project</a>
-  <a href="#try" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Try it Out!</a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>DaisyNinjaVirtuoso Productions</a>
+  <a href="#assessment" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Assessment</a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Your Results</a>
   <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">The ModSquad</a>
   <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
@@ -38,62 +36,66 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#try" class="w3-bar-item w3-button">Try it Out!</a>
+    <a href="#assessment" class="w3-bar-item w3-button">Try it Out!</a>
     <a href="#work" class="w3-bar-item w3-button">Your Results</a>
     <a href="#team" class="w3-bar-item w3-button">The ModSquad</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
   </div>
 </div>
-<br>
-<br>
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-<img src="/static/financial-background.jpg" alt="chart" style="width:100%;
-                                                                min-height:100px;
-                                                                max-height:200px;">
-  </div>
-  <div id="try">
-  <em><h2 style="text-align: center; border-style: outset;">Welcome to the Credit Invincible Project using MLOps!</h2></em>
-  <br>
-  <ul>
-  <h3><li>To get started, please fill out the form with preliminary information.</li></h3>
-   <img src="/static/credit.jpg" alt="plant" style="float: left;">
-   <form class="loginForm" action ="register" method="POST" style="text-align: left;">
-            <br>
-            <label for="first_name">First Name: </label>
-            <input type="first_name" name="first_name" id="first_name" value="">
-            <br>
-            <br>
-            <label for="last_name">Last Name: </label>
-            <input type="last_name" name="last_name" id="last_name" value="">
-            <br>
-            <br>
-            <label for="address">Home Address: </label>
-            <input type="address" name="address" id ="address" value="">
-            <br>
-            <br>
-            <label for="email">Email Address: </label>
-            <input name="email" type="email" id="email" value="">
-            <br>
-            <br>
-            <h3><li>What is your highest level of education?</li></h3>
-            <select name="education" style="cursor: pointer;">
-              <option value="Options">Pick One Option</option>
-              <option value="High School">High School</option>
-              <option value="Undergraduate">Undergraduate</option>
-              <option value="Graduate">Graduate</option>
-              <option value="Doctorate">Doctorate</option>
-              <br>
-              <br>
-            </select>
-          <br>
-          <br>
-   <h3><li>Next, provide a brief description for the financial products that are of interest.</li></h3>
-      <br>
+</head>
 
-            <textarea name="textbox" placeholder="Credit card, credit building, personal loan, financial counselling?..." rows="10" cols="109"></textarea>
-            <input class="textbox" style="font-size: x-large; cursor: pointer; " type="submit">
-      </ul>
+<body id="#">
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <span class="light">&nbsp;</span>
+  <h1 class="hero_header">
+<img src="/static/fintech_advisor.png" alt="" height=85% width=85% class="hero_header"/>
+<br>
+	  </section></h1>
+  <div id="Assessment">
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="hidden">About</h2>
+    <!-- 
+  Replace form-handler.php with URL where to send the form-data when the form is submitted
+  Goto http://w3c.github.io/html-reference/input.text.html#input.text for more information on all attributes that can be used with text input field
+-->
+    <form method="post" action="form-handler.php">
+      <div>
+        <h2>Start your credit invincible journey by filling out this credit assessment form:</h2>
+      <label for="first_name">First Name: <span class="required">*</span></label>
+      <input type="text" id="first_name" name="first_name" value="" placeholder="name" required="required" autofocus />
+      </div>
+      <label for="last_name">Last Name: <span class="required">*</span></label>
+      <input type="last_name" id="last_name" name="last_name" value="" placeholder="last_name" required="required" />
+    </div>
+      <div>
+        <label for="email">Email Address: <span class="required">*</span></label>
+        <input type="email" id="email" name="email" value="" placeholder="your@email.com" required="required" />
+      </div>
+      <div>
+        <label for="address">Home Address: <span class="required">*</span></label>
+        <input type="address" id="address" name="address" value="" placeholder="street" required="required" />
+      </div>
+      <div>
+      <br>
+        <h4>What is your highest level of education?</h4>
+        <label for="education">Degree:</label>
+        <select id="education" name="education">
+          <option value="Pick One">Options</option>
+          <option value="High School">High School</option>
+          <option value="Undergraduate">Undergraduate</option>
+          <option value="Graduate">Graduate</option>
+          <option value="Doctorate">Doctorate</option>
+        </select>
+      </div>
+      <div>
+      <br>
+      <h4>Write a brief description of the financial topics that are of interest.</h4>
+        <textarea name="textbox" placeholder="Credit card, credit building, personal loan, financial counselling?..." rows="10" cols="109"></textarea>
+        <input class="textbox" style="font-size: x-large; cursor: pointer; " type="submit">
     </form>
 </div>
 {% if final %}
@@ -144,26 +146,24 @@
 <div class="w3-row"><br>
 
 <div class="w3-third">
-  <img src="/static/Mani.jpg" alt="Mani" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="/static/Mani.jpg" alt="Mani" style="width:40%" class="w3-circle w3-hover-opacity">
   <h3>Mani Nagaraj</h3>
   <p>Data Ninja</p>
 </div>
 
 <div class="w3-third">
-  <img src="/static/Daisy_He.JPG" alt="Daisy" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="/static/Daisy_He.JPG" alt="Daisy" style="width:35%" class="w3-circle w3-hover-opacity">
   <h3>Daisy He</h3>
   <p>Savy Monitor</p>
 </div>
 
 <div class="w3-third">
-  <img src="/static/sperks_pic.jpeg" alt="Sperks" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="/static/sperks_pic.jpeg" alt="Sperks" style="width:50%" class="w3-circle w3-hover-opacity">
   <h3>Sarah Perkins</h3>
-  <p>Hacker</p>
-</div>
-
+  <p>Virtuoso Hacker</p>
 </div>
 </div>
-
+</div>
 
 <!-- Container -->
 <div class="w3-container" style="position:relative">
@@ -172,79 +172,28 @@
 </div>
 
 
-<!-- Contact Container -->
-<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
-  <div class="w3-row">
-    <div class="w3-col m5">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
-      <h3>DaisyNinjaVirtuoso Inc.</h3>
-      <p>The squad for all your MLOps needs!</p>
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
-    </div>
-    <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input" type="text" name="Message" required>
-      </div>
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>I Like it!</label>
-      <button type="submit" class="w3-button w3-hover-green w3-XXLarge w3-right-align w3-theme"><b>Send</b></button>
-      </form>
-    </div>
-  </div>
+<!-- Footer Section -->
+<section class="footer_banner" id="contact">
+  <h2 class="hidden">Footer Banner Section </h2>
+  <p class="hero_header">FOLLOW OUR CREDIT INVINCIBLE ML PROJECT ON GITHUB
+<a href="https://github.com/dataninja01/Capstone-Project" target="_blank"></a></p>
+</section>
+
+<!-- Copyrights Section -->
+<div class="copyright">&copy;daisyninjavirtuoso Productions - 2022&nbsp; <strong>&nbsp;</strong></div>
 </div>
 
-
-<!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>MLOps Rulz!</h4>
-  <h4>TODO: Thank you note... FourthBrain.ai</h4>
+  <h4>Many sincere thanks to FourthBrain.ai, Greg Loughnane, and Ashwini Badgujar</h4>
   <p>Powered by <a href="https://github.com/dataninja01/Capstone-Project" target="_blank">Credit Invincible Project on GitHub</a></p>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-
+ 
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
 </body>
 </html>
