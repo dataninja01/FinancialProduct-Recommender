@@ -121,6 +121,8 @@ def getAnalyticsData():
         userContinent = result["continent"]
         userCity = result["city"]
         webtraffic =  webtraffic(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
+        db.session.add(webtraffic)
+        db.session.commit()
     except:
         print("Could not find: ", userIP)
 
