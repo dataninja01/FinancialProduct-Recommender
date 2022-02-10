@@ -7,9 +7,9 @@ scikit-learn
 MarkupSafe
 mysql-connector==2.2.9
 mysqlclient==2.1.0
-mysql-connector
 mysql-connector-python
 numpy==1.22.1
 pandas==1.4.0
 requests==2.26.0
 WTForms==2.2.1
+httpagentparser
