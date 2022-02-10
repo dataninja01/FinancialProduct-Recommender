@@ -61,7 +61,6 @@ class webtraffics(db.Model):
     city= db.Column(db.String(100))
     os= db.Column(db.String(30))
     browser= db.Column(db.String(30))
-    session= db.Column(db.String(100))
     time= db.Column(db.String(100))
 
 def __init__(self, first_name, last_name, address, email, education, searched_for, topic_prediction, recommendation1, recommendation2, recommendation3):
@@ -81,7 +80,6 @@ def __init__(self, first_name, last_name, address, email, education, searched_fo
     self.userCity = userCity
     self.userOS - userOS
     self.userBrowser = userBrowser
-    self.sessionID = sessionID
     self.time = time
 
 # load model w metadata
@@ -115,8 +113,8 @@ def getAnalyticsData():
 
     except:
         print("Could not find: ", userIP)
-        userContinent, userCountry, userCity, userOS, userBrowser, sessionID = 'null', 'null', 'null', 'null', 'null', 'null'
-    webtraffic =  webtraffics(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
+        userContinent, userCountry, userCity, userOS, userBrowser= 'null', 'null', 'null', 'null', 'null'
+    webtraffic =  webtraffics(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, time=datetime.now().replace(microsecond=0))
     db.session.add(webtraffic)
     db.session.commit()
 
