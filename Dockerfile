@@ -1,7 +1,7 @@
 FROM python:3.8
 RUN apt-get update
 RUN cd $HOME
-RUN git clone https://github.com/dataninja01/Capstone-Project
+RUN git clone -b deploy_branch_3 https://github.com/dataninja01/Capstone-Project
 RUN cd Capstone-Project
 COPY . /app
 WORKDIR /app
