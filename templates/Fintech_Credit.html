@@ -36,7 +36,7 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#assessment" class="w3-bar-item w3-button">Try it Out!</a>
+    <a href="#assessment" class="w3-bar-item w3-button">Assessment</a>
     <a href="#work" class="w3-bar-item w3-button">Your Results</a>
     <a href="#team" class="w3-bar-item w3-button">The ModSquad</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
@@ -51,12 +51,13 @@
   <section class="hero" id="hero">
     <span class="light">&nbsp;</span>
   <h1 class="hero_header">
-<img src="/static/fintech_advisor.png" alt="" height=85% width=85% class="hero_header"/>
-<br>
+<img src="/static/fintech_advisor.png" alt="MLOps" height=85% width=85% class="hero_header"/>
+  </div>
 	  </section></h1>
-  <div id="Assessment">
+  <div id=assessment>
   <!-- About Section -->
   <section class="about" id="about">
+    <span class="light">&nbsp;</span>
     <h2 class="hidden">About</h2>
     <!--
   Replace form-handler.php with URL where to send the form-data when the form is submitted
@@ -68,6 +69,7 @@
       <label for="first_name">First Name: <span class="required">*</span></label>
       <input type="first_name" id="first_name" name="first_name" value="" placeholder="first_name" required="required" autofocus />
       </div>
+      <div>
       <label for="last_name">Last Name: <span class="required">*</span></label>
       <input type="last_name" id="last_name" name="last_name" value="" placeholder="last_name" required="required" />
     </div>
@@ -94,10 +96,11 @@
       <div>
       <br>
       <h4>Write a brief description of the financial topics that are of interest.</h4>
-        <textarea name="textbox" placeholder="Credit card, credit building, personal loan, financial counselling?..." rows="10" cols="109"></textarea>
+        <textarea name="textbox" placeholder="Credit card, digital card, credit repair, debt settlement, rewards credit card, secured credit card?..." rows="10" cols="109"></textarea>
         <input class="textbox" style="font-size: large; cursor: pointer; " type="submit">
     </form>
-</div>
+    </div>
+  </div>
 {% if final %}
 <!-- Recommendation Solutions Row -->
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
@@ -146,29 +149,26 @@
 <div class="w3-row"><br>
 
 <div class="w3-third">
-  <img src="/static/Mani.jpg" alt="Mani" style="width:40%" class="w3-circle w3-hover-opacity">
+  <a href="https://www.linkedin.com/in/mani-nagaraj/">
+  <img src="/static/Mani.jpg" alt="Mani" style="width:40%" class="w3-circle w3-hover-opacity"></a>
   <h3>Mani Nagaraj</h3>
   <p>Data Ninja</p>
 </div>
 
 <div class="w3-third">
-  <img src="/static/Daisy_He.JPG" alt="Daisy" style="width:35%" class="w3-circle w3-hover-opacity">
+  <a href="https://www.linkedin.com/in/xinyi-daisy-h-8b2b63111/">
+  <img src="/static/Daisy_He.JPG" alt="Daisy" style="width:35%" class="w3-circle w3-hover-opacity"></a>
   <h3>Daisy He</h3>
   <p>Savy Monitor</p>
 </div>
 
 <div class="w3-third">
-  <img src="/static/sperks_pic.jpeg" alt="Sperks" style="width:50%" class="w3-circle w3-hover-opacity">
+  <a href="https://www.linkedin.com/in/sarah-perkins-3359245a/">
+  <img src="/static/sperks_pic.jpeg" alt="Sperks" style="width:50%" class="w3-circle w3-hover-opacity"></a>
   <h3>Sarah Perkins</h3>
   <p>Virtuoso Hacker</p>
 </div>
 </div>
-</div>
-
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
 </div>
 
 
@@ -188,6 +188,7 @@
   <h4>Many sincere thanks to FourthBrain.ai, Greg Loughnane, and Ashwini Badgujar</h4>
   <p>Powered by <a href="https://github.com/dataninja01/Capstone-Project" target="_blank">Credit Invincible Project on GitHub</a></p>
 
+ 
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
