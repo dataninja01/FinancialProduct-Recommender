@@ -120,11 +120,14 @@ def getAnalyticsData():
         userCountry = result["country"]
         userContinent = result["continent"]
         userCity = result["city"]
-        webtraffic =  webtraffic(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
-        db.session.add(webtraffic)
-        db.session.commit()
+
     except:
         print("Could not find: ", userIP)
+        continent, userCountry, userCity, userOS, userBrowser, sessionID = null, null,null,null,null,null
+        time=datetime.now().replace(microsecond=0)
+    webtraffic =  webtraffic(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
+    db.session.add(webtraffic)
+    db.session.commit()
 
 # route post requests
 @app.route("/")
