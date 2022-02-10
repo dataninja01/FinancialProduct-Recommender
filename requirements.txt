@@ -13,4 +13,4 @@ pandas==1.4.0
 requests==2.26.0
 WTForms==2.2.1
 httpagentparser
-
+pusher
