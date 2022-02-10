@@ -132,7 +132,7 @@ def getAnalyticsData():
 # route post requests
 @app.route("/")
 def my_form():
-    return render_template('Fintech_Credit.html', leads = leads.query.all())
+    return render_template('Fintech_Credit.html', leads = leads.query.all(), webtraffic = webtraffic.query.all())
 
 @app.route("/register", methods = ["GET", "POST"])
 def predict():
