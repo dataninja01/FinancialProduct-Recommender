@@ -72,7 +72,7 @@ class leads(db.Model):
     recommendation2 = db.Column(db.String(100), nullable = False)
     recommendation3 = db.Column(db.String(100), nullable = False)
 
-class webtraffic(db.Model):
+class webtraffics(db.Model):
     __bind_key__ = 'webtraffic'
     __tablename__ = 'webvisitors'
     id = db.Column(db.Integer, primary_key = True, nullable = False)
@@ -96,6 +96,15 @@ def __init__(self, first_name, last_name, address, email, education, searched_fo
     self.recommendation1 = recommendation1
     self.recommendation2 = recommendation2
     self.recommendation3 = recommendation3
+    self.userIP = userIP
+    self.userContinent = userContinent
+    self.userCountry = userCountry
+    self.userCity = userCity
+    self.userOS - userOS
+    self.userBrowser = userBrowser
+    self.sessionID = sessionID
+    self.time = time
+    
 
 # load model w metadata
 model = joblib.load("models/pipe_clf_svc_checkpoint.joblib")
@@ -104,6 +113,12 @@ clf_model = model['pipeline']
 data = pd.read_csv('data/Credit Card agreements and rates data.csv')
 d= data.groupby(['category'],as_index=False).apply(lambda x: x.nsmallest(3, 'Min_APR'))
 d.reset_index(inplace=True)
+
+
+# route post requests
+@app.route("/")
+def my_form():
+    return render_template('Fintech_Credit.html', leads = leads.query.all(), webtraffics = webtraffics.query.all())
 
 @app.before_request
 def getAnalyticsData():
@@ -124,15 +139,10 @@ def getAnalyticsData():
     except:
         print("Could not find: ", userIP)
         userContinent, userCountry, userCity, userOS, userBrowser, sessionID = 'null', 'null', 'null', 'null', 'null', 'null'
-        time=datetime.now().replace(microsecond=0)
-    webtraffic =  webtraffic(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
+    webtraffic =  webtraffics(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
     db.session.add(webtraffic)
     db.session.commit()
 
-# route post requests
-@app.route("/")
-def my_form():
-    return render_template('Fintech_Credit.html', leads = leads.query.all(), webtraffic = webtraffic.query.all())
 
 @app.route("/register", methods = ["GET", "POST"])
 def predict():
