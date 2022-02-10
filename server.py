@@ -5,8 +5,14 @@ import sys
 import os
 from flask import Flask, flash, request, url_for, redirect, make_response, render_template
 from flask_sqlalchemy import SQLAlchemy
-# import pymysql
+import pymysql
 # pymysql.install_as_MySQLdb()
+import urllib.request
+# from pusher import Pusher
+from datetime import datetime
+import httpagentparser
+import hashlib
+
 
 
 # instantiate Flask app
@@ -22,6 +28,7 @@ INSTANCE_NAME ="fintech-reco-db"
 # configuration
 app.config["SECRET_KEY"] = "yoursecretkey"
 app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql+mysqldb://root:{PASSWORD}@{PUBLIC_IP_ADDRESS}/{DBNAME}?unix_socket=/cloudsql/{PROJECT_ID}:{INSTANCE_NAME}"
+app.config['SQLALCHEMY_BINDS'] = {'webtraffic': f"mysql+mysqldb://root:{PASSWORD}@{PUBLIC_IP_ADDRESS}/{DBNAME2}?unix_socket=/cloudsql/{PROJECT_ID}:{INSTANCE_NAME}"}
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= True
 
 
@@ -40,6 +47,20 @@ class leads(db.Model):
     recommendation1 = db.Column(db.String(100), nullable = False)
     recommendation2 = db.Column(db.String(100), nullable = False)
     recommendation3 = db.Column(db.String(100), nullable = False)
+ 
+# Web traffic for SQLAlchemy
+class webtraffics(db.Model):
+    __bind_key__ = 'webtraffic'
+    __tablename__ = 'webvisitors'
+    id = db.Column(db.Integer, primary_key = True, nullable = False)
+    ip = = db.Column(db.String(20))
+    continent = db.Column(db.String(30))
+    country= db.Column(db.String(30))
+    city= db.Column(db.String(100))
+    os= db.Column(db.String(30))
+    browser= db.Column(db.String(30))
+    session= db.Column(db.String(100))
+    time= db.Column(db.String(100))
 
 def __init__(self, first_name, last_name, address, email, education, searched_for, topic_prediction, recommendation1, recommendation2, recommendation3):
     self.first_name = first_name
@@ -52,6 +73,14 @@ def __init__(self, first_name, last_name, address, email, education, searched_fo
     self.recommendation1 = recommendation1
     self.recommendation2 = recommendation2
     self.recommendation3 = recommendation3
+    self.userIP = userIP
+    self.userContinent = userContinent
+    self.userCountry = userCountry
+    self.userCity = userCity
+    self.userOS - userOS
+    self.userBrowser = userBrowser
+    self.sessionID = sessionID
+    self.time = time
 
 # load model w metadata
 model = joblib.load("models/pipe_clf_svc_checkpoint.joblib")
@@ -64,7 +93,30 @@ d.reset_index(inplace=True)
 # route post requests
 @app.route("/")
 def my_form():
-    return render_template('Fintech_Credit.html', leads = leads.query.all())
+    return render_template('Fintech_Credit.html', leads = leads.query.all(), webtraffics = webtraffics.query.all())
+
+@app.before_request
+def getAnalyticsData():
+    global userOS, userBrowser, userIP, userContinent, userCity, userCountry,sessionID 
+    userInfo = httpagentparser.detect(request.headers.get('User-Agent'))
+    userOS = userInfo['platform']['name']
+    userBrowser = userInfo['browser']['name']
+    userIP = "72.229.28.185" if request.remote_addr == '0.0.0.0' else request.remote_addr
+    api = "https://www.iplocate.io/api/lookup/" + userIP
+    try:
+        resp = urllib.request.urlopen(api)
+        result = resp.read()
+        result = json.loads(result.decode("utf-8"))                                                                                                     
+        userCountry = result["country"]
+        userContinent = result["continent"]
+        userCity = result["city"]
+
+    except:
+        print("Could not find: ", userIP)
+        userContinent, userCountry, userCity, userOS, userBrowser, sessionID = 'null', 'null', 'null', 'null', 'null', 'null'
+    webtraffic =  webtraffics(ip = userIP, continent = userContinent, country=userCountry, city=userCity, os=userOS, browser=userBrowser, session=sessionID, time=datetime.now().replace(microsecond=0))
+    db.session.add(webtraffic)
+    db.session.commit()
 
 @app.route("/register", methods = ["GET", "POST"])
 def predict():
@@ -89,5 +141,6 @@ def predict():
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=True)
+#    app.run(debug=True)
 #   app.run(debug=False)
+    if "serve" in sys.argv: app.run(host='0.0.0.0', port=8000, debug=False)
