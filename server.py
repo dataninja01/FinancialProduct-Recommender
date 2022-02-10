@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 import pymysql
 # pymysql.install_as_MySQLdb()
 import urllib.request
-from pusher import Pusher
+# from pusher import Pusher
 from datetime import datetime
 import httpagentparser
 import hashlib
