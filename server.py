@@ -53,7 +53,7 @@ class webtraffics(db.Model):
     __bind_key__ = 'webtraffic'
     __tablename__ = 'webvisitors'
     id = db.Column(db.Integer, primary_key = True, nullable = False)
-    ip = = db.Column(db.String(20))
+    ip = db.Column(db.String(20))
     continent = db.Column(db.String(30))
     country= db.Column(db.String(30))
     city= db.Column(db.String(100))
