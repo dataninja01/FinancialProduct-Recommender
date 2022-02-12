@@ -39,6 +39,7 @@ AI Ethics - We do not calculate personal data in our recommendation engine to gu
 ```
 -Containerization and registry
 -GCP Metrics for VM instance resource management displayed on Prometheus & Grafana 
+-Web traffic monitoring
 ```
 
 ### Final Presentation: [Modsquad Team]
