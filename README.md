@@ -29,7 +29,7 @@ AI Ethics - We do not calculate personal data in our recommendation engine to gu
 -Unit testing of code with [Ponicode](https://www.ponicode.com) AI tool and [standards](https://madewithml.com/courses/mlops/testing/) 
 ```
 
-### ML pipeline in storage bucket for recommendation engine [Mani]
+### ML pipeline in GCP for recommendation engine [Mani]
 ```
 -Machine learning algorithms take numbers as inputs. This means that we will need to convert the texts into numerical vectors. There are two steps to creating the Document-Term Matrix:
 Tokenization - with NLTK library (remove the punctuations, stopwords and normalize the corpus) basically divide texts into words or smaller sub-texts.
@@ -41,6 +41,7 @@ XGBoost
 Linear Support Vector Classifier  
 The Metrics for model evaluation -ROC_AUC, test accuracy, model run time, precision, recall for the 7 categories: credit card, digital card, credit repair, debt settlement, rewards credit card, secured credit card
 -MLflow for model versioning
+-MySQL instance on CloudSQL for storing user info and store look up table and prediction monitoring and data drift.
 ```   
 
 ### Monitoring [Daisy]
